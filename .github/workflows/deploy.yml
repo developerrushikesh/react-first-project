@@ -1,5 +1,6 @@
 name: Deploy React App to GitHub Pages
 
+
 on:
   push:
     branches:
@@ -8,7 +9,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write  # To allow pushing to gh-pages branch
+      
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
