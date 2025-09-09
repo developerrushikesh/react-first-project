@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write  # To allow pushing to gh-pages branch
-      
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -31,4 +31,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+        publish_dir: ./dist
